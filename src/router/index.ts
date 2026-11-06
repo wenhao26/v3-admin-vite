@@ -188,6 +188,36 @@ export const constantRoutes: RouteRecordRaw[] = [
         }
       }
     ]
+  },
+  {
+    path: "/example",
+    component: Layouts,
+    redirect: "/example/table",
+    name: "Example",
+    meta: {
+      title: "实战演示",
+      elIcon: "Position"
+    },
+    children: [
+      {
+        path: "example-table",
+        component: () => import("@/pages/example/table/index.vue"),
+        name: "Table",
+        meta: {
+          title: "列表页面",
+          keepAlive: true
+        }
+      },
+      {
+        path: "example-form",
+        component: () => import("@/pages/example/form/index.vue"),
+        name: "Form",
+        meta: {
+          title: "表单页面",
+          keepAlive: true
+        }
+      }
+    ]
   }
 ]
 

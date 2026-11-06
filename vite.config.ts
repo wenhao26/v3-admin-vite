@@ -10,6 +10,7 @@ import Components from "unplugin-vue-components/vite"
 import { defineConfig, loadEnv } from "vite"
 import { ViteMcp } from "vite-plugin-mcp"
 import svgLoader from "vite-svg-loader"
+import * as compiler from "vue/compiler-sfc"
 
 // Configuring Vite: https://cn.vite.dev/config
 export default defineConfig(({ mode }) => {
@@ -101,7 +102,9 @@ export default defineConfig(({ mode }) => {
     },
     // 插件配置
     plugins: [
-      vue(),
+      vue({
+        compiler
+      }),
       // 支持将 SVG 文件导入为 Vue 组件
       svgLoader({
         defaultImport: "url",

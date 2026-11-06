@@ -8,7 +8,7 @@ const { initTheme } = useTheme()
 
 const { initGreyAndColorWeakness } = useGreyAndColorWeakness()
 
-const { initStarNotification, initStoreNotification, initMobileNotification } = usePany()
+// const { initStarNotification, initStoreNotification, initMobileNotification } = usePany()
 
 // 初始化主题
 initTheme()
@@ -17,11 +17,11 @@ initTheme()
 initGreyAndColorWeakness()
 
 // #region 初始化通知
-initStarNotification()
+// initStarNotification()
 
-initStoreNotification()
+// initStoreNotification()
 
-initMobileNotification()
+// initMobileNotification()
 // #endregion
 </script>
 
