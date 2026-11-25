@@ -200,6 +200,24 @@ export const constantRoutes: RouteRecordRaw[] = [
     },
     children: [
       {
+        path: "example-component-overview",
+        component: () => import("@/pages/example/component/overview.vue"),
+        name: "Overview",
+        meta: {
+          title: "概览",
+          keepAlive: true
+        }
+      },
+      {
+        path: "example-component-drawer",
+        component: () => import("@/pages/example/component/drawer.vue"),
+        name: "Drawer",
+        meta: {
+          title: "抽屉页面",
+          keepAlive: true
+        }
+      },
+      {
         path: "example-table",
         component: () => import("@/pages/example/table/index.vue"),
         name: "Table",
@@ -216,7 +234,17 @@ export const constantRoutes: RouteRecordRaw[] = [
           title: "表单页面",
           keepAlive: true
         }
+      },
+      {
+        path: "example-sparkline",
+        component: () => import("@/pages/example/sparkline/index.vue"),
+        name: "Sparkline",
+        meta: {
+          title: "折线图页面",
+          keepAlive: true
+        }
       }
+
     ]
   }
 ]
